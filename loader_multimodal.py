@@ -14,6 +14,8 @@ class Data(object):
     Class used to load data for ISLES, BRATS and IXI datasets. ISLES2015 and BRATS data can be downloaded from
     http://www.isles-challenge.org/ISLES2015 and https://sites.google.com/site/braintumorsegmentation/home/brats2015.
     This loader expects the data to be in a .npz format where there's one .npz file for each modality, e.g. T1.npz, T2.npz etc.
+    Each .npz contains an array of volumes, and every volume has shape (Z, H, W), where Z is the number of spatial slices 
+    and H, W the height and width of a slice respectively.
     IXI dataset can be downloaded from http://brain-development.org/ixi-dataset and can be loaded as-is.
 
     A splits.txt file is expected if the Data object will be used for cross-validation through runner.py.
