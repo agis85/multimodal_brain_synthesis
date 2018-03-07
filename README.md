@@ -21,6 +21,8 @@ exp = Experiment(input_modalities, output_weights, '/path/to/foldername', data, 
 exp.run(data)
 ```
 
+The code is written in [Keras] and expects image_data_format to be set to channels_first.
+
 ## Data
 
 The sources used to evaluate our methods are brain data from [ISLES] and [BRATS] challenges, as well as the [IXI] dataset.
@@ -30,12 +32,17 @@ The sources used to evaluate our methods are brain data from [ISLES] and [BRATS]
 If you use this code for your research, please cite our papers:
 
 ```
-@article{chartsias2017multimodal,
+@article{chartsias2018multimodal,
   title={Multimodal MR Synthesis via Modality-Invariant Latent Representation},
   author={Chartsias, Agisilaos and Joyce, Thomas and Giuffrida, Mario Valerio and Tsaftaris, Sotirios A},
   journal={IEEE Transactions on Medical Imaging},
-  year={2017},
-  publisher={IEEE}
+  year={2018},
+  volume={37},
+  number={3},
+  pages={803-814},
+  publisher={IEEE},
+  doi={10.1109/TMI.2017.2764326},
+  ISSN={0278-0062}
 }
 
 @inproceedings{joyce2017robust,
@@ -58,3 +65,4 @@ The project uses a [Spatial Transformer] implementation, distributed under MIT l
 [ISLES]: http://www.isles-challenge.org/ISLES2015/
 [BRATS]: https://sites.google.com/site/braintumorsegmentation/home/brats2015
 [IXI]: http://brain-development.org/ixi-dataset/
+[Keras]: https://keras.io/
